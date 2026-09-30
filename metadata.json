@@ -1,0 +1,8 @@
+{
+  "name": "SoundBank - English Grade 8 Offline Audio",
+  "description": "SoundBank offline audio player for English Grade 8 with Period 1, 2, 3 subfolders and large touch controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

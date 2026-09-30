@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="playGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#6366f1" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background with rounded squircles -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)" />
+
+  <!-- Outer Sound Pulse Ring -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#38bdf8" stroke-width="4" stroke-opacity="0.2" stroke-dasharray="12 12" />
+  <circle cx="256" cy="256" r="160" fill="none" stroke="#6366f1" stroke-width="8" stroke-opacity="0.35" />
+
+  <!-- Center Vault Glow Plate -->
+  <circle cx="256" cy="256" r="128" fill="#1e293b" filter="url(#shadow)" stroke="url(#glow)" stroke-width="6" />
+
+  <!-- Modern Waveform Bars flanking center -->
+  <g fill="url(#glow)" opacity="0.85">
+    <rect x="148" y="226" width="10" height="60" rx="5" />
+    <rect x="168" y="206" width="10" height="100" rx="5" />
+    <rect x="334" y="206" width="10" height="100" rx="5" />
+    <rect x="354" y="226" width="10" height="60" rx="5" />
+  </g>
+
+  <!-- Bold Play Triangle in center -->
+  <polygon points="232,204 306,256 232,308" fill="url(#playGrad)" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
+</svg>
