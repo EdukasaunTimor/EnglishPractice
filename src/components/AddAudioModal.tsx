@@ -11,7 +11,7 @@ import {
   Disc,
   Folder,
 } from 'lucide-react';
-import { AudioTrack } from '../types/audio';
+import { AudioTrack, Grade } from '../types/audio';
 import {
   getAudioDuration,
   extractWaveform,
@@ -21,6 +21,7 @@ import {
 
 interface AddAudioModalProps {
   isOpen: boolean;
+  selectedGrade?: Grade;
   initialPrefix?: string;
   onClose: () => void;
   onTrackAdded: (track: AudioTrack) => void;
@@ -29,6 +30,7 @@ interface AddAudioModalProps {
 
 export const AddAudioModal: React.FC<AddAudioModalProps> = ({
   isOpen,
+  selectedGrade = '8',
   initialPrefix = '',
   onClose,
   onTrackAdded,
@@ -94,13 +96,13 @@ export const AddAudioModal: React.FC<AddAudioModalProps> = ({
         }
 
         let title = cleanName;
-        let artist = 'English Grade 8';
+        let artist = `Grade ${selectedGrade}`;
 
         if (cleanName.includes(' - ')) {
           const parts = cleanName.split(' - ');
           if (/^[123]\./.test(parts[0])) {
             title = cleanName;
-            artist = parts.length > 2 ? parts[parts.length - 1] : 'English Grade 8';
+            artist = parts.length > 2 ? parts[parts.length - 1] : `Grade ${selectedGrade}`;
           } else {
             artist = parts[0].trim();
             title = parts.slice(1).join(' - ').trim();
@@ -111,6 +113,7 @@ export const AddAudioModal: React.FC<AddAudioModalProps> = ({
           id: `track_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
           title,
           artist,
+          grade: selectedGrade,
           duration: duration || 60,
           size: file.size,
           mimeType: file.type || 'audio/mpeg',
@@ -172,7 +175,8 @@ export const AddAudioModal: React.FC<AddAudioModalProps> = ({
       const track: AudioTrack = {
         id: `sample_${Date.now()}`,
         title: `${periodNum}.1.1 - ${defaultName}`,
-        artist: `Period ${periodNum} • English Grade 8`,
+        artist: `Period ${periodNum} • Grade ${selectedGrade}`,
+        grade: selectedGrade,
         duration: sample.duration,
         size: sample.blob.size,
         mimeType: sample.blob.type,
@@ -252,7 +256,8 @@ export const AddAudioModal: React.FC<AddAudioModalProps> = ({
       const track: AudioTrack = {
         id: `recording_${Date.now()}`,
         title,
-        artist: 'Class Recording',
+        artist: `Class Recording • Grade ${selectedGrade}`,
+        grade: selectedGrade,
         duration: Math.max(1, duration),
         size: recordedBlob.size,
         mimeType: recordedBlob.type || 'audio/webm',
@@ -282,7 +287,7 @@ export const AddAudioModal: React.FC<AddAudioModalProps> = ({
             </div>
             <div>
               <h3 className="text-xl font-bold text-white tracking-tight">
-                Add Audio to SoundBank
+                Add Audio to EnglishPractice
               </h3>
               <p className="text-xs text-slate-400">
                 Saves offline to Period 1, 2, or 3

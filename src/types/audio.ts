@@ -1,8 +1,11 @@
+export type Grade = '7' | '8' | '9';
+
 export interface AudioTrack {
   id: string;
   title: string;
   artist: string;
   album?: string;
+  grade?: Grade;
   duration: number; // in seconds
   size: number; // in bytes
   mimeType: string;

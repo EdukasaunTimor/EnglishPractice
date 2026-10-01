@@ -1,0 +1,87 @@
+{
+  "curriculum": "English Secondary Curriculum",
+  "version": "2.0",
+  "description": "EnglishPractice official audio lessons for Grade 7, Grade 8, and Grade 9",
+  "tracks": [
+    {
+      "id": "track_g7_1_1_1",
+      "grade": "7",
+      "period": "period1",
+      "url": "/audio/grade7/period1/1.1.1 Dialogue - Welcome to Grade 7.mp3",
+      "title": "1.1.1 Dialogue - Welcome to Grade 7",
+      "artist": "Grade 7"
+    },
+    {
+      "id": "track_g7_2_1_1",
+      "grade": "7",
+      "period": "period2",
+      "url": "/audio/grade7/period2/2.1.1 Vocabulary - My Family and Home.mp3",
+      "title": "2.1.1 Vocabulary - My Family and Home",
+      "artist": "Grade 7"
+    },
+    {
+      "id": "track_g7_3_1_1",
+      "grade": "7",
+      "period": "period3",
+      "url": "/audio/grade7/period3/3.1.1 Stories - Animals and Nature.mp3",
+      "title": "3.1.1 Stories - Animals and Nature",
+      "artist": "Grade 7"
+    },
+    {
+      "id": "track_g8_1_1_1",
+      "grade": "8",
+      "period": "period1",
+      "url": "/audio/grade8/period1/1.1.1 Dialogue - Greetings and Introductions.mp3",
+      "title": "1.1.1 Dialogue - Greetings and Introductions",
+      "artist": "Grade 8"
+    },
+    {
+      "id": "track_g8_1_1_2",
+      "grade": "8",
+      "period": "period1",
+      "url": "/audio/grade8/period1/1.1.2 Listening Practice - Meeting New Friends.mp3",
+      "title": "1.1.2 Listening Practice - Meeting New Friends",
+      "artist": "Grade 8"
+    },
+    {
+      "id": "track_g8_2_1_1",
+      "grade": "8",
+      "period": "period2",
+      "url": "/audio/grade8/period2/2.1.1 Reading Comprehension - Daily Routines.mp3",
+      "title": "2.1.1 Reading Comprehension - Daily Routines",
+      "artist": "Grade 8"
+    },
+    {
+      "id": "track_g8_3_1_1",
+      "grade": "8",
+      "period": "period3",
+      "url": "/audio/grade8/period3/3.1.1 Storytelling - The Community Market.mp3",
+      "title": "3.1.1 Storytelling - The Community Market",
+      "artist": "Grade 8"
+    },
+    {
+      "id": "track_g9_1_1_1",
+      "grade": "9",
+      "period": "period1",
+      "url": "/audio/grade9/period1/1.1.1 Advanced Dialogue - Debates and Opinions.mp3",
+      "title": "1.1.1 Advanced Dialogue - Debates and Opinions",
+      "artist": "Grade 9"
+    },
+    {
+      "id": "track_g9_2_1_1",
+      "grade": "9",
+      "period": "period2",
+      "url": "/audio/grade9/period2/2.1.1 Science & Technology - Future Innovations.mp3",
+      "title": "2.1.1 Science & Technology - Future Innovations",
+      "artist": "Grade 9"
+    },
+    {
+      "id": "track_g9_3_1_1",
+      "grade": "9",
+      "period": "period3",
+      "url": "/audio/grade9/period3/3.1.1 Literature and Global Perspectives.mp3",
+      "title": "3.1.1 Literature and Global Perspectives",
+      "artist": "Grade 9"
+    }
+  ]
+}

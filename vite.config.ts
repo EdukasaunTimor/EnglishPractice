@@ -21,10 +21,10 @@ export default defineConfig(() => {
         ],
         manifest: {
           id: '/',
-          name: 'SoundBank - English Grade 8 Offline Audio',
-          short_name: 'SoundBank',
+          name: 'EnglishPractice - Secondary English Offline Audio',
+          short_name: 'EnglishPractice',
           description:
-            'SoundBank offline audio player for English Grade 8 with Period 1, 2, 3 subfolders and large touch controls.',
+            'EnglishPractice offline audio player for Grade 7, 8, and 9 with Period 1, 2, 3 subfolders and large touch controls.',
           theme_color: '#0f172a',
           background_color: '#020617',
           display: 'standalone',
@@ -53,7 +53,8 @@ export default defineConfig(() => {
           ],
         },
         workbox: {
-          globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
+          globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2,mp3,wav,ogg,json}'],
+          maximumFileSizeToCacheInBytes: 25 * 1024 * 1024,
         },
         devOptions: {
           enabled: true,

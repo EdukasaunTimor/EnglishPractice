@@ -421,6 +421,29 @@ export function getTrackPeriod(title: string): PeriodKey {
   return 'other';
 }
 
+import { AudioTrack, Grade } from '../types/audio';
+
+/**
+ * Identifies the Grade (7, 8, or 9) of an audio track.
+ * Defaults to '8' if not explicitly defined.
+ */
+export function getTrackGrade(track: AudioTrack): Grade {
+  if (track.grade && (track.grade === '7' || track.grade === '8' || track.grade === '9')) {
+    return track.grade;
+  }
+  const text = `${track.artist} ${track.title} ${track.id}`.toLowerCase();
+  if (text.includes('grade 7') || text.includes('grade7') || text.includes('g7')) {
+    return '7';
+  }
+  if (text.includes('grade 9') || text.includes('grade9') || text.includes('g9')) {
+    return '9';
+  }
+  if (text.includes('grade 8') || text.includes('grade8') || text.includes('g8')) {
+    return '8';
+  }
+  return '8';
+}
+
 /**
  * Sorts audio tracks alphabetically and naturally by name (e.g. 1.1.1, 1.1.2, 1.1.10)
  */
